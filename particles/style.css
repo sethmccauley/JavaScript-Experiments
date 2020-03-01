@@ -1,0 +1,41 @@
+body {
+    background: #000000; 
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+.formWindow {
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    background-color: rgb(46, 44, 44, .7);
+    color: white;
+    width: 200;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+input.inputField {
+    background-color: #C0C0C0;
+    color: #000000;
+    border-radius: 3px;
+    border: 1px solid #000000;
+    width: 92%;
+    padding: 2px 8px;
+}
+
+button {
+    background-color: #008CBA; /* Green */
+    border: solid 1px white;
+    color: white;
+    padding: 4px 8px;
+    margin: 2px 0 0 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 3px;
+}
