@@ -18,7 +18,7 @@ function splitTime(start, end, interval){
     for(let i=0; tk<te; i++){
         var hh = Math.floor(tk/60);
         var mm = (tk%60);
-        times[i] = ("0" + (hh % 12)).slice(-2) + ':' + ("0" + mm).slice(-2) + ap[Math.floor(hh/12)];
+        times[i] = ("0" + (hh % 12)).slice(-2) + ':' + ("0" + mm).slice(-2) + ' ' + ap[Math.floor(hh/12)];
         tk = tk + interval;
     }
     return times
