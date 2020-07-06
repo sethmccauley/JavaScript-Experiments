@@ -15,7 +15,7 @@ function splitTime(start, end, interval){
     let tk = startArray[0]*60
     let te = Number(endArray[0]*60) + Number(endArray[1])
 
-    for(let i=0; tk<te; i++){
+    for(let i=0; tk<=te; i++){
         var hh = Math.floor(tk/60);
         var mm = (tk%60);
         times[i] = ("0" + (hh % 12)).slice(-2) + ':' + ("0" + mm).slice(-2) + ' ' + ap[Math.floor(hh/12)];
