@@ -17,7 +17,7 @@ function splitTime(start, end, interval){
     for(let i=0; ts<=te; i++){
         let hh = Math.floor(ts/60);
         let mm = (ts%60);
-        times[i] = ("0" + (hh % 12)).slice(-2) + ':' + ("0" + mm).slice(-2) + ' ' + (Math.floor(hh/12) < 1 ? 'AM' : 'PM');
+        times[i] = ("" + ((hh==12)?12:"0"+hh%12)).slice(-2) + ':' + ("0" + mm).slice(-2) + ' ' + (Math.floor(hh/12) < 1 ? 'AM' : 'PM');
         ts += interval;
     }
     return times
