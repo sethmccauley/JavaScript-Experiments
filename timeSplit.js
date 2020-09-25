@@ -22,3 +22,26 @@ function splitTime(start, end, interval){
     }
     return times
 }
+
+// With Moment JS:
+// https://momentjs.com/
+function splitTime(start, end, interval){
+    let times = []
+    let st = moment(this.minutesToReadable(start), "hh:mm A")
+    let et = moment(this.minutesToReadable(end), "hh:mm A")
+    let int = parseInt(interval)
+
+    while(st < et){
+        times.push(st.format("hh:mm A"))
+        st.add(int, 'minutes')
+    }
+    return times
+}
+
+function readableToMinutes(readableTime) {
+    return moment.duration(moment(readableTime, "HH:mm:ss").format("HH:mm")).asMinutes()
+}
+
+function minutesToReadable(minutes){
+    return moment.utc().startOf('day').add(minutes, 'minutes').format('hh:mm A')
+}
