@@ -43,5 +43,16 @@ function readableToMinutes(readableTime) {
 }
 
 function minutesToReadable(minutes){
-    return moment.utc().startOf('day').add(minutes, 'minutes').format('hh:mm A')
+    return moment.startOf('day').add(minutes, 'minutes').format('hh:mm A')
 }
+
+// Just some bitwise operations
+function setBitList(id, count = false){
+    const list = []
+    for(let i = 1; i <= id; i = i*2){
+        list.push(i)
+    }
+    if(count) return list.length
+    return list
+}
+
